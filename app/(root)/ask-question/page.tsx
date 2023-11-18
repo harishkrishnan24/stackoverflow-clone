@@ -5,9 +5,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const AskQuestion = async () => {
-  // eslint-disable-next-line no-unused-vars
-  const { userId: testId } = auth();
-  const userId = "CL123456";
+  const { userId } = auth();
 
   if (!userId) redirect("/sign-in");
 

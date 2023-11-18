@@ -58,6 +58,7 @@ export async function deleteUser(params: DeleteUserParams) {
       throw new Error("User not found");
     }
 
+    // eslint-disable-next-line no-unused-vars
     const userQuestionIds = await Question.find({ author: user._id }).distinct(
       "_id"
     );
